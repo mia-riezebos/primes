@@ -1,6 +1,7 @@
 import generatePrimes, { cache } from "../index";
+import { cache as isPrimeCache } from "@mia-cx/isprime";
 
-const amount = 1000;
+const amount = 1000000;
 
 test(`generate ${amount} primes.`, () => {
   expect(cache.size).toBe(0);
@@ -14,6 +15,10 @@ test(`generate ${amount} primes (cached).`, () => {
   const primes = generatePrimes(amount);
   expect(primes.length).toBe(amount);
   cache.clear();
+});
+
+test(`generate ${amount} primes (cached).`, () => {
+  console.log(isPrimeCache.size);
 });
 
 const start = 1000;

@@ -10,7 +10,6 @@ export const cache: Set<number> = new Set();
  */
 export default function generatePrimes(n: number, o?: number): number[] {
   if (n == o) {
-    // console.debug(`n == o, checking if ${n} is prime`);
     return isPrime(n) ? [n] : [];
   }
   const primes: number[] = [2];
@@ -29,11 +28,9 @@ export default function generatePrimes(n: number, o?: number): number[] {
     }
   } else {
     if (n > o) {
-      // console.debug("n > o, swapping variables");
       [n, o] = [o, n];
     }
 
-    console.debug(`generating primes between ${n} and ${o}`);
     i = Math.max(3, n);
     if (i > 3) {
       primes.shift();
