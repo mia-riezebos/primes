@@ -1,0 +1,58 @@
+{
+  "name": "@mia-cx/primes",
+  "version": "0.0.1",
+  "author": "mia-cx",
+  "description": "yet another prime generator package with caching.\ncomputes prime numbers using trial division.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mia-cx/primes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mia-cx/primes/issues"
+  },
+  "homepage": "https://github.com/mia-cx/primes#readme",
+  "keywords": [
+    "primes",
+    "prime numbers",
+    "prime-numbers",
+    "prime generator",
+    "cache",
+    "trial division"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "format": "prettier \"src/**/*.ts\" --write",
+    "lint": "eslint -c .eslintrc.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "@mia-cx/isprime": "^0.0.5"
+  }
+}
