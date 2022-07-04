@@ -1,4 +1,4 @@
-import generatePrimes, { cache } from "./index";
+import generatePrimes, { cache } from "../index";
 
 const amount = 1000;
 
@@ -6,21 +6,21 @@ test(`generate ${amount} primes.`, () => {
   expect(cache.size).toBe(0);
   const primes = generatePrimes(amount);
   expect(primes.length).toBe(amount);
-  expect(cache.size).toBe(amount);
+  expect(cache.size).toBe(amount - 1);
 });
 
 test(`generate ${amount} primes (cached).`, () => {
-  expect(cache.size).toBe(amount);
+  expect(cache.size).toBe(amount - 1);
   const primes = generatePrimes(amount);
   expect(primes.length).toBe(amount);
+  cache.clear();
 });
 
 const start = 1000;
 const end = 2000;
 
-cache.clear();
-
 test(`generate primes between ${start} and ${end}`, () => {
+  cache.clear();
   expect(cache.size).toBe(0);
   const primes = generatePrimes(start, end);
   expect(primes.length).toBe(135);
