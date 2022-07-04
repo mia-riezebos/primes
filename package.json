@@ -53,6 +53,6 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "@mia-cx/isprime": "^0.0.5"
+    "@mia-cx/isprime": "^0.0.6"
   }
 }
