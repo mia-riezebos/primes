@@ -17,10 +17,6 @@ test(`generate ${amount} primes (cached).`, () => {
   cache.clear();
 });
 
-test(`generate ${amount} primes (cached).`, () => {
-  console.log(isPrimeCache.size);
-});
-
 const start = 1000;
 const end = 2000;
 
