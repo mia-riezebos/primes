@@ -18,7 +18,7 @@ commonjs
 const generatePrimes = require('@mia-cx/primes');
 
 console.log(generatePrimes(100)); // returns 100 primes
-console.log(generatePrimes(100-200)); // returns prime numbers between 100 and 200
+console.log(generatePrimes(100, 200)); // returns prime numbers between 100 and 200
 ```
 
 esm
@@ -26,5 +26,5 @@ esm
 import isPrime from "@mia-cx/primes";
 
 console.log(generatePrimes(100)); // returns an array of 100 primes
-console.log(generatePrimes(100-200)); // returns an array of prime numbers between 100 and 200
+console.log(generatePrimes(100, 200)); // returns an array of prime numbers between 100 and 200
 ```
