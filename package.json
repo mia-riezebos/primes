@@ -1,6 +1,6 @@
 {
   "name": "@mia-cx/primes",
-  "version": "0.0.4",
+  "version": "0.0.4a",
   "author": "mia-cx",
   "description": "yet another prime generator package with caching.\ncomputes prime numbers using trial division.",
   "repository": {
